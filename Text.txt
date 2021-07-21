@@ -1,3 +1,0 @@
-
-background: linear-gradient(to bottom, #1380ff , #0b4588);
-    color: yellow;
