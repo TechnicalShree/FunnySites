@@ -5,20 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Botton Hover Effect</title>
+    <title>Responsive website</title>
 </head>
 <body>
-    <a href="#" class="btn"><span>Button</span></a>
+    <div class="navigation">
+        <div class="banner">
+            <img src="Best.jpg" class="cover" alt="Image">
+        </div>
+        <div class="navLink">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
-<script>
-    const btn = document.querySelector('.btn');
-    btn.onmousemove = function(e){
-        const x = e.pageX - btn.offsetLeft;
-        const y = e.pageY - btn.offsetTop;
+    <section class="sec">
+        <header>
+            <div class="toggle"></div> 
+            <a href="#" class="btn">Hire Me</a>
+        </header>
 
-        btn.style.setProperty('--x', x + 'px');
-        btn.style.setProperty('--y', y + 'px');
-    }
-</script>
+        <div class="imgBx">
+            <img src="CV.jpg" alt="Profile" class="cover">
+        </div>
+        <div class="content">
+            <h2>Hi, I am<br><span>Krushna Raut</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita iste corrupti ullam delectus! Molestiae labore harum dicta impedit inventore commodi!</p>
+            <a href="#" class="btn">Download My CV</a>
+        </div>
+
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p class="copyrighttext">&copy;2021 Technical Shree</p>
+        </div>
+    </section>
+
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let sec = document.querySelector('.sec');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            sec.classList.toggle('active');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/f70a9d0069.js" crossorigin="anonymous"></script>
 </body>
 </html>
